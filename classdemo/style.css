@@ -1,0 +1,38 @@
+body{
+
+background-color: yellowgreen;
+height: 100px;
+
+}
+
+/* using element selectors will grab all the elements on the web page*/
+p{
+font-size: 40px;
+}
+
+.blue-text{
+color: navy;
+}
+
+.p1{
+font-size: 24px
+}
+
+.p2{
+font-size: 60px;
+}
+
+.parent{
+    display: flex;
+    color: pink
+    align-content: center;
+    justify-content: center;
+}
+
+.children{
+display: flex;
+color: red;
+align-content: center;
+justify-content: center;
+
+}
