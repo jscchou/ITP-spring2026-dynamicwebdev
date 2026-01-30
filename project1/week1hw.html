@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en"> <!--this tells the server that this document is in english-->
+<head>
+    <title>Week 1 - Web Album by Jasmine</title>
+    
+</head>
+
+<header>choose one photo to begin.</header>
+
+
+<body>
+
+    <div class="gallery">
+   
+    <a href="page1.html"><img src="photos/photo1.jpg"></a>
+    <a href="page2.html"><img src="photos/photo2.jpg"></a>
+    <a href="page3.html"><img src="photos/photo3.jpg"></a>
+    <a href="page4.html"><img src="photos/photo4.jpg"></a>
+    <a href="page5.html"><img src="photos/photo5.jpg"></a>
+    <a href="page6.html"><img src="photos/photo6.jpg"></a>
+  
+    </div>
+
+<style>
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;      
+  justify-content: center;  
+}
+
+header {
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.gallery img {
+  width: 150px;      /* the frame width */
+  height: 150px;     /* the frame height */
+  object-fit: cover; /* crop instead of stretch */
+}
+
+
+</style>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="en"> <!--this tells the server that this document is in english-->
+<head>
+    <title>Week 1 - Web Album by Jasmine</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+    <a href="page1.html" class="button prev"><h3>prev.</h3></a>
+
+    <div class="content">
+
+    <div class="gallery">
+   
+    <a href="page1.html"><img src="photos/photo2.jpg"></a>
+
+    </div>
+
+    <div class="text">
+    <p>
+    Another example of me randomly shouting at my friends to look at the camera. They know how to suddenly look cute when you’ve been friends for ten years.
+    </p>
+
+    </div>
+
+    </div>
+
+    <a href="page3.html" class="button next"><h3>next.</h3></a>
+
+
+    <a href="week1hw.html" class="button to-homepage"><h3>to homepage.</h3></a>
+
+    </div>
+
+<style>
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;      
+  justify-content: center;  
+}
+
+header {
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.gallery img {
+  width: 40vw;       /* 40% of screen width */
+  max-width: 600px; 
+  min-width: 300px; 
+  height: auto;
+}
+
+
+.text {
+  width: 40vw;
+  max-width: 400px;
+  min-width: 200px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+
+.button {
+  position: fixed;
+  bottom: 30px;
+  font-size: 16px;
+  text-decoration: none;  
+  color: black;
+}
+
+
+.prev {
+  position: fixed;
+  bottom: 30px;
+  left: 70px;
+}
+
+.next {
+  position: fixed;
+  bottom: 30px;
+  right: 70px;
+}
+
+.to-homepage{
+  position: fixed;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+
+</style>
+</body>
+</html>
