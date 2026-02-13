@@ -1,0 +1,174 @@
+.container {
+  width: 100%;
+  height: 90vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: bisque;
+  font-family:'Arial Black';
+  font-size: 6vw;
+  line-height: 0.8;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: rgba(0, 0, 0, 0.639);
+  text-align: center;
+  letter-spacing: -0.5px;
+  z-index: 1;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: #f0e6d2;
+}
+
+section {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.description-section {
+  width: 100%;
+  padding: 30px; 
+  text-align: center;
+}
+
+#invitationtitle {
+  font-family: 'Arial Black';
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#invitationcaption {
+  font-family: 'Arial';
+  color: #767575;
+  margin-top: 0;
+}
+
+
+.content-section {
+  width: 100%;
+  padding: 10px;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+
+.column-left, .column-right {
+  flex: 1;
+  overflow: hidden;
+}
+
+.column-left img, .column-right img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+.poster-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;
+    background-color: #f0e6d2;
+    overflow: hidden;
+}
+
+.image-layer, .text-overlay {
+    grid-area: 1 / 1;
+}
+
+
+.image-layer {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    z-index: 1;
+}
+
+.image-layer div {
+    flex: 1;
+}
+
+.image-layer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.text-overlay-subtitle {
+    grid-area: 1 / 1;
+    z-index: 2;
+    
+    font-family: 'Arial Black';
+    color: bisque;
+
+    /* 1. Force the overlay to cover the whole image area */
+    width: 100%;
+    height: 100%;
+    
+    /* 2. Use Flexbox to pin the content */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Pushes text to the bottom */
+    align-items: flex-end;      /* Pushes text to the right */
+    
+    /* 3. Remove any default padding that might be centering it */
+    padding: 20px; 
+    box-sizing: border-box; 
+    pointer-events: none;
+}
+
+.main-title {
+    margin: 0;
+    text-align: right; /* Ensures multi-line text is right-aligned */
+    line-height: 0.8;
+    font-size: 8vw;
+    -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: rgba(0, 0, 0, 0.639);
+    /* mix-blend-mode: difference; */ /* Keep this for the Dallas Buyers vibe */
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.7); /* Dark overlay */
+}
+
+.modal-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 20px;
+  width: 300px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  right: 15px; top: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
