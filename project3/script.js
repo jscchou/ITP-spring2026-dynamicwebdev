@@ -1,9 +1,6 @@
-// shows a alert when the page opens
-alert("javascript page has been successfully linked!");
-// write to the inspector console
-console.log("this is a console message");
 
-window.onload = async () => {
+window.onload = () => {
+    alert("Welcome!");
     console.log("window has loaded");
 
     const imageLayers = document.querySelectorAll('.image-layer');
@@ -24,7 +21,6 @@ window.onload = async () => {
             layer.style.filter = "brightness(1.0)";
         });
 
-        // Call showWeatherPopup instead of alert
         layer.addEventListener('click', () => {
             const locationName = layer.parentElement.querySelector('.main-title').innerText;
             showWeatherPopup(locationName); 
@@ -36,12 +32,6 @@ window.onload = async () => {
         modal.style.display = "none";
     };
 
-    // Close modal when clicking outside the box
-    window.onclick = (event) => {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    };
 };
 
 async function showWeatherPopup(locationName) {
@@ -53,24 +43,33 @@ async function showWeatherPopup(locationName) {
     modal.style.display = "block";
     currentTempText.innerText = "Loading...";
 
-    let params = new URLSearchParams({
+    const params = new URLSearchParams({
         access_key: "8d1ec3197fefddc8db850f991fcf9db0",
-        query: locationName + ", Taipei",
+        query: locationName + ", Taiepi, Taiwan",
         units: "m"
     });
 
     try {
-        // Note: Weatherstack free tier often requires http instead of https
-        let response = await fetch("http://api.weatherstack.com/current?" + params);
-        let jsonData = await response.json();
+      
+        const response = await fetch("http://api.weatherstack.com/current?" + params);
+        const jsonData = await response.json();
+
+
+        if (jsonData.error) {
+            console.error("API Error:", jsonData.error.info);
+            currentTempText.innerText = "Error: " + jsonData.error.code;
+            return;
+        }
 
         if (jsonData.current) {
-            currentTempText.innerHTML = `Currently: <strong>${jsonData.current.temperature}°C</strong><br>${jsonData.current.weather_descriptions[0]}`;
+            const temp = jsonData.current.temperature;
+            const desc = jsonData.current.weather_descriptions[0];
+            currentTempText.innerHTML = `Currently: <strong>${temp}°C</strong><br>${desc}`;
         } else {
             currentTempText.innerText = "Location not found.";
         }
     } catch (error) {
-        currentTempText.innerText = "Error loading weather.";
-        console.error(error);
+        currentTempText.innerText = "Network Error.";
+        console.error("Fetch Error:", error);
     }
 }
