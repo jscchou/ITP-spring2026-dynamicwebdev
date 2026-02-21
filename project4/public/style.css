@@ -1,0 +1,42 @@
+body {
+    background-color:#B22222;
+    color: black;
+    overflow: hidden;
+}
+
+#new-year-title {
+    font-size: 3em;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+#caption {
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Lucida Sans';
+    justify-content: center;
+}
+
+#examples {
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Lucida Sans';
+    justify-content: center;
+}
+
+.textbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+#displayArea {
+    text-align: center;
+    font-family: 'Lucida Sans';
+}

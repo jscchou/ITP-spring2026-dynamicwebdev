@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>New Year Blessings</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js"></script>
+  </head>
+
+  <body>
+    <h2 id="new-year-title">Happy Lunar New Year!</h2>
+    <p id="caption">
+      It's the year of the Horse! <br />
+      Let's create a list of blessings with "horse" in it.
+    </p>
+    <p id="examples">
+      Examples: May wealth ride in on a golden horse. May vitality charge like a
+      spirited horse.
+    </p>
+
+    <form id="blessingForm" class="textbox" method="POST" action="/post">
+      <textarea
+        id="messageInput"
+        name="message"
+        placeholder="your blessing"
+      ></textarea>
+      <input type="submit" value="add blessing" />
+    </form>
+
+    <div id="displayArea"></div>
+  </body>
+</html>
