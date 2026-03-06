@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<head>
+  <title>Machine 01 — People Places and Things</title>
+  <link rel="stylesheet" href="stylemachine.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@500&family=Archivo+Black&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-home">
+      <span class="nav-label">Home</span>
+    </a>
+    <a href="library.html" class="nav-library">Library</a>
+  </nav>
+
+  <!-- Main content -->
+  <main class="machine-page">
+    <div class="machine-page-inner">
+
+      <!-- Page header (above the card) -->
+      <header class="machine-page-header">
+        <span class="machine-page-number">Machine 01</span>
+        <h1 class="machine-page-title">People Places and Things</h1>
+      </header>
+
+      <!-- Description -->
+      <p class="machine-page-description">
+        Short descriptions of this machine Short descriptions of this machine
+        Short descriptions of this machine
+      </p>
+
+      <!-- Compose card -->
+      <div class="compose-card">
+
+        <!-- Poetry output area -->
+        <div class="poetry-output">
+          <span class="poetry-placeholder">Press compose to create poetry</span>
+        </div>
+
+        <!-- Compose button area -->
+        <div class="compose-actions">
+          <button class="compose-btn">Compose</button>
+        </div>
+
+        <!-- Trash / Donate buttons (shown after generation) -->
+        <div class="post-generate-actions" hidden>
+          <button class="action-btn action-btn--trash">Discard</button>
+          <button class="action-btn action-btn--donate">Donate to Library</button>
+        </div>
+
+        <!-- Donate form (shown when donate is clicked) -->
+        <div class="donate-form" hidden>
+          <h2 class="donate-form-title">Donate Your Poem</h2>
+          <div class="donate-form-fields">
+
+            <div class="form-field">
+              <label class="form-label" for="poem-title">Poem Title</label>
+              <input
+                class="form-input"
+                type="text"
+                id="poem-title"
+                name="poem-title"
+                placeholder="Name Your Poem"
+              />
+            </div>
+
+            <div class="form-field">
+              <label class="form-label" for="poem-note">Your Note (Optional)</label>
+              <textarea
+                class="form-textarea"
+                id="poem-note"
+                name="poem-note"
+                placeholder="Add a personal note or reflection..."
+                rows="4"
+              ></textarea>
+            </div>
+
+            <div class="donate-form-actions">
+              <button type="button" class="action-btn action-btn--cancel">Cancel</button>
+              <button type="button" class="action-btn action-btn--submit">Submit to Library</button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer hint -->
+      <p class="machine-page-hint">
+        Each generation produces unique poetry. Press compose again for a new creation.
+      </p>
+
+    </div>
+  </main>
+
+
+  <script rel="clientside-javascript" src="machine01.js"></script>
+
+</body>
+</html>

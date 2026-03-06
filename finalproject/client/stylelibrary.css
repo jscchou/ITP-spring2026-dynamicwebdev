@@ -1,0 +1,182 @@
+/* ===========================
+   CSS Variables
+=========================== */
+:root {
+  --color-bg:             #4F0C28;
+  --color-card-bg:        #5E1533;
+  --color-nav-bg:         #5E1533;
+  --color-overlay:        #F4D35E;
+  --color-text:           #C5D2F8;
+  --color-muted:          #9A8FA5;
+  --color-output-bg:      #6D1E3E;
+  --color-compose-btn:    #EFE6CE;
+  --color-compose-text:   #4F0C28;
+  --color-border:      #C5D2F8;
+
+  --font-display:      'Azeret Mono', monospace;
+  --font-heading:      'Archivo Black', sans-serif;
+  --font-mono:         'Roboto Mono', monospace;
+}
+
+/* ===========================
+   Reset / Base
+=========================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-mono);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===========================
+   Navbar
+=========================== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 76px;
+  background-color: var(--color-nav-bg);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.10), 0px 1px 2px -1px rgba(0, 0, 0, 0.10);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 36px;
+  z-index: 100;
+}
+
+.nav-home {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-heading);
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: var(--color-text);
+}
+
+.nav-icon {
+  display: inline-block;
+  width: 20px;
+  height: 17.39px;
+  background-color: var(--color-text);
+}
+
+.nav-library {
+  font-family: var(--font-heading);
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: var(--color-text);
+}
+
+
+/* ===========================
+   Library Page Layout
+=========================== */
+.library-page {
+  background-color: var(--color-bg);
+  min-height: 100vh;
+  padding-top: 76px; /* offset for fixed navbar */
+  display: flex;
+  justify-content: center;
+}
+
+.library-page-inner {
+  width: 886px;
+  padding: 76px 0 33px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ===========================
+   Library Header
+=========================== */
+.library-header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+.library-title {
+  font-family: var(--font-display);
+  font-size: 76.64px;
+  font-weight: 500;
+  line-height: 68.98px;
+  color: var(--color-text);
+  text-transform: uppercase;
+}
+
+.library-subtitle {
+  font-family: var(--font-mono);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--color-muted);
+}
+
+/* ===========================
+   Library Empty State
+=========================== */
+.library-content {
+  width: 100%;
+  min-height: 311px;
+  display: flex;
+  flex-direction: column; 
+  align-items: left;
+  gap: 100px
+}
+
+.library-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.library-empty-message {
+  font-family: var(--font-mono);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--color-muted);
+  text-align: center;
+}
+
+.displayArea {
+  width: 100%;
+  min-height: 200px;
+  background-color: var(--color-output-bg);
+  border-radius: 8px;
+  padding: 20px;
+  font-family: var(--font-mono);
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--color-text);
+  white-space: pre-wrap; /* preserve line breaks */
+} 
+
+.poem-card__title {
+  margin-bottom: 16px;
+}
+
+.poem-card__poem {
+  margin-bottom: 16px;
+}
+
+

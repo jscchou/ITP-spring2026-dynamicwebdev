@@ -1,0 +1,234 @@
+/* ===========================
+   CSS Variables
+=========================== */
+:root {
+  --color-bg:          #4F0C28;
+  --color-card-bg:     #5E1533;
+  --color-nav-bg:      #5E1533;
+  --color-overlay:     #F4D35E;
+  --color-text:        #C5D2F8;
+  --color-muted:       #9A8FA5;
+  --color-border:      #C5D2F8;
+
+  --font-display:      'Azeret Mono', monospace;
+  --font-heading:      'Archivo Black', sans-serif;
+  --font-mono:         'Roboto Mono', monospace;
+}
+
+/* ===========================
+   Reset / Base
+=========================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-mono);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===========================
+   Navbar
+=========================== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 76px;
+  background-color: var(--color-nav-bg);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.10), 0px 1px 2px -1px rgba(0, 0, 0, 0.10);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 36px;
+  z-index: 100;
+}
+
+.nav-home {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-heading);
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: var(--color-text);
+}
+
+.nav-icon {
+  display: inline-block;
+  width: 20px;
+  height: 17.39px;
+  background-color: var(--color-text);
+}
+
+.nav-library {
+  font-family: var(--font-heading);
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: var(--color-text);
+}
+
+/* ===========================
+   Page Wrapper
+=========================== */
+.page-wrapper {
+  max-width: 958px;
+  margin: 0 auto;
+  padding: 76px 36px 0; /* offset for fixed navbar */
+}
+
+/* ===========================
+   Hero / Header
+=========================== */
+.hero {
+  padding-top: 20px;
+  padding-bottom: 0;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: 95.80px;
+  font-weight: 500;
+  line-height: 105.38px;
+  text-align: center;
+  color: var(--color-text);
+  text-transform: uppercase;
+  padding: 128px 0 0;
+}
+
+.hero-divider {
+  border-top: 1px solid var(--color-border);
+  margin-top: 24px;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-subtitle {
+  font-family: var(--font-heading);
+  font-size: 28.74px;
+  line-height: 34.49px;
+  text-align: center;
+  color: var(--color-text);
+  text-transform: uppercase;
+}
+
+/* ===========================
+   Machines Grid
+=========================== */
+.machines-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 886px;
+}
+
+/* ===========================
+   Machine Card
+=========================== */
+.machine-card {
+  position: relative;
+  width: 443px;
+  height: 563.13px;
+  background-color: var(--color-card-bg);
+  border: 2px solid var(--color-border);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.machine-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-overlay);
+  opacity: 0.30;
+  pointer-events: none;
+}
+
+.machine-info {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+}
+
+.machine-number {
+  font-family: var(--font-mono);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.machine-title {
+  font-family: var(--font-mono);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--color-text);
+}
+
+.machine-date {
+  font-family: var(--font-mono);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+/* ===========================
+   Footer
+=========================== */
+.footer {
+  border-top: 1px solid var(--color-border);
+  padding: 51px 0 0;
+  margin-top: 0;
+}
+
+.footer-credit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 134.48px;
+  font-family: var(--font-heading);
+  font-size: 28.74px;
+  line-height: 34.49px;
+  text-transform: uppercase;
+  color: var(--color-text);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 134.48px;
+}
+
+.footer-brand,
+.footer-copyright {
+  font-family: var(--font-heading);
+  font-size: 28.74px;
+  line-height: 34.49px;
+  text-transform: uppercase;
+  color: var(--color-text);
+}
+

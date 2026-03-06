@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Poetry Library</title>
+  <link rel="stylesheet" href="stylelibrary.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@500&family=Archivo+Black&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-home">
+      <span class="nav-label">Home</span>
+    </a>
+    <a href="library.html" class="nav-library">Library</a>
+  </nav>
+
+  <!-- Main content -->
+  <main class="library-page">
+    <div class="library-page-inner">
+
+      <!-- Page header -->
+      <header class="library-header">
+        <h1 class="library-title">Poetry Library</h1>
+        <p class="library-subtitle">A collection of poems donated by our community</p>
+      </header>
+
+      <!-- Poems list / empty state -->
+      <section class="library-content">
+        <div class="library-empty">
+          <p class="library-empty-message">No poems in the library yet.</p>
+        </div>
+      </section>
+
+    </div>
+
+    <div id="displayArea"></div>
+  </main>
+
+  <script src="library.js"></script>
+
+</body>
+</html>
